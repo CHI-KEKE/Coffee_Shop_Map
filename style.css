@@ -1,0 +1,230 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #310a31;
+  --color-dark--2: #847996;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+
+  background-color: #fff;
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  width: 100%;
+  height: 70%;
+  background-color: var(--color-light--1);
+  display: flex;
+  flex-direction: row;
+}
+.img-container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  height: 80px;
+  object-position: center;
+}
+
+.form {
+  background: linear-gradient(to bottom, rgb(201, 133, 55), black);
+  padding: 3rem 5rem 4rem 5rem;
+  height: 100%;
+  background-color: var(--color-dark--2);
+  border-radius: 5px;
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form__label {
+  flex: 0 0 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.form__btn {
+  display: none;
+}
+
+/* when form is hidden */
+.form.hidden {
+  transform: translateY(-30rem);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  opacity: 0;
+  display: none;
+}
+
+#map {
+  /* flex: 1; */
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-light--1);
+}
+
+/* popup content */
+.yes-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid green;
+}
+.no-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid red;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-dark--1);
+}
+/* pop up content */
+
+/* sliders */
+.section {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+.slider {
+  background-color: var(--color-dark--1);
+  width: 100%;
+  height: 100%;
+  /* height: 5rem; */
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  /* overflow: scroll; */
+}
+
+.slide {
+  background-color: var(--color-dark--2);
+  border: 2px dashed;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  justify-items: center;
+  align-items: center;
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.coffee__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.coffee__details {
+  display: flex;
+  align-items: baseline;
+}
+
+.coffee__icon {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+  height: 0.28rem;
+}
+
+.coffee__value {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.coffee__unit {
+  font-size: 1.1rem;
+  color: var(--color-light--1);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+/* sliders */

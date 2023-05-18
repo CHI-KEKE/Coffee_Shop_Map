@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_coffeeshop_List</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <div class="map-container">
+        <form class="form hidden">
+            <div class="form__row">
+                <label class="form__label">🏬 Name</label>
+                <input
+                  class="form__input form__input--name"
+                  placeholder="name"
+                />
+              </div>
+            <div class="form__row">
+              <label class="form__label">🪑 Seat</label>
+              <select class="form__input form__input--seat">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form__row">
+                <label class="form__label">💰 Price</label>
+                <select class="form__input form__input--price">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form__row">
+                <label class="form__label">☕️ Coffee</label>
+                <select class="form__input form__input--coffee">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form__row">
+                <label class="form__label">🔌 Socket</label>
+                <select class="form__input form__input--socket">
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+            </div>
+            <div class="form__row">
+                <label class="form__label">🚽 Toilet</label>
+                <select class="form__input form__input--toilet">
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+            </div>
+            <div class="form__row">
+                <label class="form__label">🚝 MRT</label>
+                <select class="form__input form__input--MRT">
+                  <option value="nearby">nearby</option>
+                  <option value="far">far</option>
+                </select>
+            </div>
+            <button class="form__btn">OK</button>
+            <div class="img-container">
+                <img class = "logo" src="/logo.png" alt="">
+            </div>
+        </form>
+        <div id="map"></div>
+    </div>
+    <section class="section">
+  
+        <div class="slider">
+
+          <!-- <button class="slider__btn slider__btn--left">&larr;</button> -->
+          <!-- <button class="slider__btn slider__btn--right">&rarr;</button> -->
+        </div>
+      </section>
+  
+
+</body>
+</html>
